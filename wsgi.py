@@ -3,7 +3,7 @@ from flask import Flask, abort, url_for
 
 app = Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def index():
     html = ['<ul>']
     for username, user in db.users.items():
