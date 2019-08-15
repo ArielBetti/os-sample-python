@@ -1,7 +1,7 @@
 import db
 from flask import Flask, abort, url_for
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 @application.route('/')
 def index():
@@ -25,4 +25,4 @@ def profile(username):
     else:
         return abort(404, "Usuario nao encontrado")
 
-app.add_url_rule('/user/<username>/', view_func=profile, endpoint='user')
+application.add_url_rule('/user/<username>/', view_func=profile, endpoint='user')
